@@ -1,0 +1,28 @@
+body {
+    background: #1e1e1e;
+    color: white;
+    font-family: Arial;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.editor, .output {
+    flex: 1;
+    padding: 20px;
+}
+
+.output {
+    background: #252526;
+    border-left: 2px solid #333;
+}
+
+#result {
+    background: #1e1e1e;
+    padding: 10px;
+    border-radius: 5px;
+    color: #ff6b6b;
+}
