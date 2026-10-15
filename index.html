@@ -1,26 +1,319 @@
-<!DOCTYPE html>
-<html lang="pl">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>JSON Editor</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="color-scheme" content="light dark">
+    <meta charset="utf-8">
 
-    <!-- CodeMirror -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/javascript/javascript.min.js"></script>
+    <!--
+      This is an extra-large, structured test endpoint of the WBAR‑PRO platform.
+      It uses a universal JSON preview format similar to common API response pages.
+      All data is placeholder-only and may be freely reused without restrictions.
+      This endpoint does not represent any final system and is purely for large-scale testing.
+    -->
 </head>
+
 <body>
+<pre>{
+  "Status": "OK",
+  "Type": "Giant-Test-Endpoint-XL",
+  "Version": "0.0.2-dev",
+  "Message": "This is an extra-large, clean and structured JSON preview.",
+  "Timestamp": "2026-10-15T13:55:00+02:00",
 
-<div class="container">
-    <div class="editor" id="editor"></div>
+  "System": {
+    "Environment": "development",
+    "Mode": "public-test",
+    "Build": {
+      "ID": "WBAR-PRO-TEST-XL-0005",
+      "Branch": "experimental-xl",
+      "Commit": "11111111111111111111111111111111",
+      "Generated": true
+    },
+    "Flags": {
+      "ExperimentalFeatures": true,
+      "PublicPreview": true,
+      "RestrictedAccess": false,
+      "InternalDiagnostics": false,
+      "LargeJSONMode": true
+    }
+  },
 
-    <div class="output">
-        <h3>Wynik:</h3>
-        <pre id="result"></pre>
-    </div>
-</div>
+  "Meta": {
+    "Creator": "WBAR-PRO",
+    "Purpose": "Testing very large JSON structures",
+    "License": "public-use",
+    "Notes": [
+      "This JSON is intentionally extra-large.",
+      "It is formatted to be clean and readable.",
+      "It does not represent any real application.",
+      "No host is defined at this stage.",
+      "It is safe to copy, reuse and modify."
+    ]
+  },
 
-<script src="script.js"></script>
+  "Modules": {
+    "Core": {
+      "Enabled": true,
+      "Description": "Base runtime placeholder",
+      "Config": {
+        "AllowDebug": true,
+        "AllowExperimental": true,
+        "MaxThreads": 128,
+        "MemoryLimitMB": 8192,
+        "Profiles": [
+          "default",
+          "high-performance",
+          "low-power",
+          "debug"
+        ]
+      }
+    },
+
+    "OverlayEngine": {
+      "Enabled": true,
+      "Description": "Overlay engine placeholder",
+      "Rendering": {
+        "Layers": 24,
+        "MaxFPS": 360,
+        "Effects": [
+          "blur",
+          "shadow",
+          "alpha",
+          "masking",
+          "vector",
+          "grid",
+          "ui-panels",
+          "particles",
+          "transitions",
+          "glow",
+          "outline",
+          "noise"
+        ],
+        "Presets": [
+          "minimal",
+          "streamer",
+          "gamer",
+          "monitoring",
+          "debug-overlay"
+        ]
+      }
+    },
+
+    "SocialLayer": {
+      "Enabled": true,
+      "Description": "Social system placeholder",
+      "UserModel": {
+        "Fields": [
+          "id",
+          "username",
+          "displayName",
+          "avatar",
+          "banner",
+          "bio",
+          "badges",
+          "roles",
+          "friends",
+          "followers",
+          "following",
+          "createdAt",
+          "updatedAt",
+          "lastSeen"
+        ],
+        "Limits": {
+          "MaxBadges": 256,
+          "MaxRoles": 64,
+          "MaxFriends": 10000,
+          "MaxFollowers": 100000
+        }
+      },
+      "Presence": {
+        "States": [
+          "online",
+          "offline",
+          "idle",
+          "busy",
+          "invisible"
+        ],
+        "MaxSessions": 8
+      }
+    },
+
+    "APIGateway": {
+      "Enabled": true,
+      "Description": "API gateway placeholder",
+      "Endpoints": {
+        "Public": [
+          "/v1/test",
+          "/v1/info",
+          "/v1/modules",
+          "/v1/status",
+          "/v1/diagnostics",
+          "/v1/config",
+          "/v1/ping",
+          "/v1/time"
+        ],
+        "Internal": [
+          "/v1/internal/debug",
+          "/v1/internal/metrics",
+          "/v1/internal/config",
+          "/v1/internal/logs",
+          "/v1/internal/simulate",
+          "/v1/internal/reset"
+        ]
+      },
+      "RateLimits": {
+        "Anonymous": {
+          "RequestsPerMinute": 60,
+          "Burst": 10
+        },
+        "Registered": {
+          "RequestsPerMinute": 600,
+          "Burst": 50
+        },
+        "System": {
+          "RequestsPerMinute": 6000,
+          "Burst": 500
+        }
+      }
+    }
+  },
+
+  "Diagnostics": {
+    "CPU": {
+      "Cores": 32,
+      "UsagePercent": 18.3,
+      "TemperatureC": 49.1
+    },
+    "Memory": {
+      "TotalMB": 32768,
+      "UsedMB": 8420,
+      "FreeMB": 24348
+    },
+    "Network": {
+      "InboundKBps": 256,
+      "OutboundKBps": 512,
+      "Connections": 84
+    },
+    "Storage": {
+      "TotalGB": 2048,
+      "UsedGB": 512,
+      "FreeGB": 1536,
+      "Volumes": [
+        "volume-01",
+        "volume-02",
+        "volume-03",
+        "volume-04"
+      ]
+    }
+  },
+
+  "Data": {
+    "LargeArray1": [
+      "item-001", "item-002", "item-003", "item-004", "item-005",
+      "item-006", "item-007", "item-008", "item-009", "item-010",
+      "item-011", "item-012", "item-013", "item-014", "item-015",
+      "item-016", "item-017", "item-018", "item-019", "item-020",
+      "item-021", "item-022", "item-023", "item-024", "item-025",
+      "item-026", "item-027", "item-028", "item-029", "item-030",
+      "item-031", "item-032", "item-033", "item-034", "item-035",
+      "item-036", "item-037", "item-038", "item-039", "item-040",
+      "item-041", "item-042", "item-043", "item-044", "item-045",
+      "item-046", "item-047", "item-048", "item-049", "item-050",
+      "item-051", "item-052", "item-053", "item-054", "item-055",
+      "item-056", "item-057", "item-058", "item-059", "item-060",
+      "item-061", "item-062", "item-063", "item-064", "item-065",
+      "item-066", "item-067", "item-068", "item-069", "item-070",
+      "item-071", "item-072", "item-073", "item-074", "item-075",
+      "item-076", "item-077", "item-078", "item-079", "item-080",
+      "item-081", "item-082", "item-083", "item-084", "item-085",
+      "item-086", "item-087", "item-088", "item-089", "item-090",
+      "item-091", "item-092", "item-093", "item-094", "item-095",
+      "item-096", "item-097", "item-098", "item-099", "item-100"
+    ],
+
+    "LargeArray2": [
+      "data-001", "data-002", "data-003", "data-004", "data-005",
+      "data-006", "data-007", "data-008", "data-009", "data-010",
+      "data-011", "data-012", "data-013", "data-014", "data-015",
+      "data-016", "data-017", "data-018", "data-019", "data-020",
+      "data-021", "data-022", "data-023", "data-024", "data-025",
+      "data-026", "data-027", "data-028", "data-029", "data-030",
+      "data-031", "data-032", "data-033", "data-034", "data-035",
+      "data-036", "data-037", "data-038", "data-039", "data-040",
+      "data-041", "data-042", "data-043", "data-044", "data-045",
+      "data-046", "data-047", "data-048", "data-049", "data-050",
+      "data-051", "data-052", "data-053", "data-054", "data-055",
+      "data-056", "data-057", "data-058", "data-059", "data-060",
+      "data-061", "data-062", "data-063", "data-064", "data-065",
+      "data-066", "data-067", "data-068", "data-069", "data-070",
+      "data-071", "data-072", "data-073", "data-074", "data-075",
+      "data-076", "data-077", "data-078", "data-079", "data-080",
+      "data-081", "data-082", "data-083", "data-084", "data-085",
+      "data-086", "data-087", "data-088", "data-089", "data-090",
+      "data-091", "data-092", "data-093", "data-094", "data-095",
+      "data-096", "data-097", "data-098", "data-099", "data-100"
+    ],
+
+    "ObjectsList": [
+      {
+        "id": 1,
+        "name": "object-001",
+        "active": true,
+        "value": 10.5
+      },
+      {
+        "id": 2,
+        "name": "object-002",
+        "active": false,
+        "value": 20.0
+      },
+      {
+        "id": 3,
+        "name": "object-003",
+        "active": true,
+        "value": 30.75
+      },
+      {
+        "id": 4,
+        "name": "object-004",
+        "active": true,
+        "value": 40.25
+      },
+      {
+        "id": 5,
+        "name": "object-005",
+        "active": false,
+        "value": 50.0
+      }
+    ],
+
+    "NestedData": {
+      "SectionA": {
+        "Key1": "Value1",
+        "Key2": "Value2",
+        "Key3": "Value3",
+        "Key4": "Value4",
+        "Key5": "Value5"
+      },
+      "SectionB": {
+        "Key1": 100,
+        "Key2": 200,
+        "Key3": 300,
+        "Key4": 400,
+        "Key5": 500
+      },
+      "SectionC": {
+        "Flags": {
+          "FlagA": true,
+          "FlagB": false,
+          "FlagC": true,
+          "FlagD": false,
+          "FlagE": true
+        }
+      }
+    }
+  },
+
+  "End": "This is the end of the extra-large giant test JSON."
+}</pre>
 </body>
 </html>
